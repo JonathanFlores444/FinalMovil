@@ -28,6 +28,7 @@
         android:gravity="center"
         android:hint="CEDULA"
         android:inputType="number"
+        android:maxLength="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,6 +63,7 @@
         android:ems="10"
         android:gravity="center"
         android:hint="CORREO"
+        android:inputType="textWebEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/txtApellidoReg"
         app:layout_constraintStart_toStartOf="@+id/txtApellidoReg"
         app:layout_constraintTop_toBottomOf="@+id/txtApellidoReg" />
@@ -74,6 +76,7 @@
         android:gravity="center"
         android:hint="TELEFONO"
         android:inputType="number"
+        android:maxLength="10"
         app:layout_constraintEnd_toEndOf="@+id/txtCorreoReg"
         app:layout_constraintStart_toStartOf="@+id/txtCorreoReg"
         app:layout_constraintTop_toBottomOf="@+id/txtCorreoReg" />
