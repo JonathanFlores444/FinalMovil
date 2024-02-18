@@ -11,83 +11,97 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="REGISTRASE"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087" />
+        app:layout_constraintVertical_bias="0.061" />
 
     <EditText
-        android:id="@+id/txtRegNombre"
-        android:layout_width="245dp"
-        android:layout_height="58dp"
+        android:id="@+id/txtCedulaReg"
+        android:layout_width="286dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="84dp"
         android:ems="10"
+        android:gravity="center"
+        android:hint="CEDULA"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNombreReg"
+        android:layout_width="286dp"
+        android:layout_height="66dp"
+        android:ems="10"
+        android:gravity="center"
         android:hint="NOMBRE"
-        android:inputType="text"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintEnd_toEndOf="@+id/txtCedulaReg"
+        app:layout_constraintStart_toStartOf="@+id/txtCedulaReg"
+        app:layout_constraintTop_toBottomOf="@+id/txtCedulaReg" />
 
     <EditText
-        android:id="@+id/txtRegApellido"
-        android:layout_width="245dp"
-        android:layout_height="58dp"
+        android:id="@+id/txtApellidoReg"
+        android:layout_width="286dp"
+        android:layout_height="66dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="APELLIDO"
-        android:inputType="text"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.329" />
+        app:layout_constraintEnd_toEndOf="@+id/txtNombreReg"
+        app:layout_constraintStart_toStartOf="@+id/txtNombreReg"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreReg" />
 
     <EditText
-        android:id="@+id/txtRegUsuario"
-        android:layout_width="245dp"
-        android:layout_height="58dp"
+        android:id="@+id/txtCorreoReg"
+        android:layout_width="286dp"
+        android:layout_height="66dp"
         android:ems="10"
+        android:gravity="center"
+        android:hint="CORREO"
+        app:layout_constraintEnd_toEndOf="@+id/txtApellidoReg"
+        app:layout_constraintStart_toStartOf="@+id/txtApellidoReg"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellidoReg" />
+
+    <EditText
+        android:id="@+id/txtTelefonoReg"
+        android:layout_width="286dp"
+        android:layout_height="66dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="TELEFONO"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/txtCorreoReg"
+        app:layout_constraintStart_toStartOf="@+id/txtCorreoReg"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreoReg" />
+
+    <EditText
+        android:id="@+id/txtUsuarioReg"
+        android:layout_width="286dp"
+        android:layout_height="66dp"
+        android:ems="10"
+        android:gravity="center"
         android:hint="USUARIO"
-        android:inputType="text"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457" />
+        app:layout_constraintEnd_toEndOf="@+id/txtTelefonoReg"
+        app:layout_constraintStart_toStartOf="@+id/txtTelefonoReg"
+        app:layout_constraintTop_toBottomOf="@+id/txtTelefonoReg" />
 
     <EditText
-        android:id="@+id/txtRegContrasenia"
-        android:layout_width="245dp"
-        android:layout_height="58dp"
+        android:id="@+id/txtContraseniaReg"
+        android:layout_width="286dp"
+        android:layout_height="66dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="CONTRASEÑA"
-        android:inputType="text"
-        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.586" />
-
-    <TextView
-        android:id="@+id/txtRegAtras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:text="Atras"
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
-        app:layout_constraintVertical_bias="0.274" />
+        app:layout_constraintEnd_toEndOf="@+id/txtUsuarioReg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtUsuarioReg"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsuarioReg"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnRegistrar"
@@ -99,6 +113,24 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.773" />
+        app:layout_constraintVertical_bias="0.861" />
+
+    <TextView
+        android:id="@+id/txtRegAtras"
+        android:layout_width="120dp"
+        android:layout_height="59dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="Atras"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
+        app:layout_constraintVertical_bias="0.212" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
