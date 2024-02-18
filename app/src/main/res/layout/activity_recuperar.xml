@@ -6,4 +6,122 @@
     android:layout_height="match_parent"
     tools:context=".RecuperarActivity">
 
+    <TextView
+        android:id="@+id/lblTituloRecu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuperacion de Contraseña"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.099" />
+
+    <EditText
+        android:id="@+id/txtCedulaRecu"
+        android:layout_width="245dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="192dp"
+        android:ems="10"
+        android:hint="CEDULA"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtUsuarioRecu"
+        android:layout_width="245dp"
+        android:layout_height="58dp"
+        android:ems="10"
+        android:hint="USUARIO"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtCedulaRecu"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtCedulaRecu"
+        app:layout_constraintTop_toBottomOf="@+id/txtCedulaRecu"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <EditText
+        android:id="@+id/txtNuevaConRecu"
+        android:layout_width="245dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="392dp"
+        android:ems="10"
+        android:hint="NUEVA CONTRASEÑA"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtConfirmarConRecu"
+        android:layout_width="245dp"
+        android:layout_height="58dp"
+        android:ems="10"
+        android:hint="CONFIRMAR"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtNuevaConRecu"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtNuevaConRecu"
+        app:layout_constraintTop_toBottomOf="@+id/txtNuevaConRecu"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <TextView
+        android:id="@+id/lblSubtituloRecu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrese sus datos:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.198" />
+
+    <TextView
+        android:id="@+id/lblSubtituloRecu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrese su nueva contraseña:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.487" />
+
+    <Button
+        android:id="@+id/btnRecuperar"
+        android:layout_width="172dp"
+        android:layout_height="65dp"
+        android:text="Actualizar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831" />
+
+    <TextView
+        android:id="@+id/lblRecuAtras"
+        android:layout_width="120dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="Atras"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecuperar"
+        app:layout_constraintVertical_bias="0.923" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
