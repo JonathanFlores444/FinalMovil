@@ -85,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
 
     <TextView
-        android:id="@+id/txtRecuperacion"
+        android:id="@+id/lblRecuperacion"
         android:layout_width="235dp"
         android:layout_height="58dp"
         android:clickable="true"

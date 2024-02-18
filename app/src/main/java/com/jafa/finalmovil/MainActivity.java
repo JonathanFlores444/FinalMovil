@@ -24,7 +24,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvIrRegistro;
+    TextView tvIrRegistro, tvIrRecuperar;
     Button btIrInicio;
     EditText edusuario, edcontrasenia;
     @Override
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tvIrRegistro = findViewById(R.id.lblRegistrarse);
+        tvIrRecuperar = findViewById(R.id.lblRecuperacion);
         btIrInicio = findViewById(R.id.btnIngresar);
         edusuario = findViewById(R.id.txtUsuario);
         edcontrasenia = findViewById(R.id.txtContrasenia);
@@ -40,6 +41,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent IrRegistro = new Intent(MainActivity.this, RegistroActivity.class);
                 startActivity(IrRegistro);
+            }
+        });
+        tvIrRecuperar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent IrRecuperacion = new Intent(MainActivity.this, RecuperarActivity.class);
+                startActivity(IrRecuperacion);
             }
         });
         btIrInicio.setOnClickListener(new View.OnClickListener() {
@@ -64,14 +72,12 @@ public class MainActivity extends AppCompatActivity {
                     JSONArray jsonResponse = new JSONArray(response);
 
                         String userType = jsonResponse.getString(0);
-                        if ("0".equals(userType)) {
-                            Intent IrInicio = new Intent(MainActivity.this, InicioActivity.class);
-                            startActivity(IrInicio);
-                        } else if ("1".equals(userType)) {
-                            Intent IrInicio = new Intent(MainActivity.this, InicioActivity.class);
-                            startActivity(IrInicio);
-                        } else if("2".equals(userType)) {
-                            Toast.makeText(MainActivity.this, "Datos Incorrectos", Toast.LENGTH_SHORT).show();
+                    if ("1".equals(userType)) {
+                        Intent IrInicio = new Intent(MainActivity.this, InicioActivity.class);
+                        startActivity(IrInicio);
+                        finish();
+                        } else  {
+                        Toast.makeText(MainActivity.this, "Datos Incorrectos", Toast.LENGTH_SHORT).show();
                         }
 
 
