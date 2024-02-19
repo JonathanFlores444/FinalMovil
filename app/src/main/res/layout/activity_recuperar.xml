@@ -27,6 +27,7 @@
         android:ems="10"
         android:hint="CEDULA"
         android:inputType="text"
+        android:maxLength="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
