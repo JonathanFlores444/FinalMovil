@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void loginWS() {
         String url = "http://192.168.1.60/WS/webapi.php?op=login&user=" + edusuario.getText().toString() + "&pass=" + edcontrasenia.getText().toString() + "";
+
         StringRequest postRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -75,7 +76,11 @@ public class MainActivity extends AppCompatActivity {
                     String resultado = jsonResponse.getString(0);
 
                     if ("1".equals(resultado)) {
+                        Bundle enviar = new Bundle();
+                        enviar.putString("Usuario", edusuario.getText().toString());
+                        enviar.putString("Contrasenia",edcontrasenia.getText().toString());
                         Intent IrInicio = new Intent(MainActivity.this, InicioActivity.class);
+                        IrInicio.putExtras(enviar);
                         startActivity(IrInicio);
                         finish();
                     } else {
